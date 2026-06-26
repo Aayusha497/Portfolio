@@ -22,7 +22,7 @@ const projects = [
       "Search & filtering",
       "Responsive UI",
     ],
-    techStack: ["React", "JavaScript", "CSS"],
+    techStack: ["Next.js", "React", "JavaScript", "CSS"],
     github: "https://github.com/Aayusha497/Terranova-real-estate",
     live: "",
   },
