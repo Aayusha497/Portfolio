@@ -1,0 +1,181 @@
+/* ── Footer ── */
+.footer {
+  background: #050508;
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 2rem 2.5rem;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(108,99,255,0.5), rgba(0,212,255,0.3), transparent);
+}
+.footer-glow {
+  position: absolute;
+  width: 600px; height: 300px;
+  background: radial-gradient(ellipse, rgba(108,99,255,0.12), transparent 70%);
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* CTA */
+.footer-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.8rem;
+  line-height: 1.2;
+}
+.footer-subtext {
+  color: rgba(255,255,255,0.45);
+  font-size: 1rem;
+  margin: 0 0 1.8rem;
+  line-height: 1.6;
+}
+.footer-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: 1px solid rgba(108,99,255,0.35);
+  background: rgba(108,99,255,0.08);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.25s, background 0.25s, color 0.25s, transform 0.25s;
+}
+.footer-phone:hover {
+  border-color: rgba(108,99,255,0.7);
+  background: rgba(108,99,255,0.18);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Divider */
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  margin: 3rem 0;
+}
+
+/* Socials */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.social-icon {
+  position: relative;
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.5);
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: transform 0.25s, color 0.25s, border-color 0.25s, background 0.25s, box-shadow 0.25s;
+}
+.social-icon:hover {
+  transform: translateY(-5px);
+  color: var(--color);
+  border-color: color-mix(in srgb, var(--color) 40%, transparent);
+  background: color-mix(in srgb, var(--color) 10%, transparent);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--color) 25%, transparent);
+}
+.social-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: rgba(15,15,25,0.9);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.8);
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  backdrop-filter: blur(8px);
+}
+.social-icon:hover .social-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.88rem;
+}
+.footer-copy {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.25);
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-width: 260px;
+  padding: 18px 28px;
+
+  border-radius: 14px;
+  color: white;
+  text-decoration: none;
+
+  background: rgba(14, 20, 45, 0.9);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  border-color: #3b82f6;
+}
+
+@media (max-width: 500px) {
+  .footer-bottom { justify-content: center; text-align: center; }
+}
